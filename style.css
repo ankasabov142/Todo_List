@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(142, 86, 208, 1) 52%,
+    rgba(50, 60, 62, 1) 98%
+  );
+}
+
+.mainHeader{
+    font-size: 41px;
+    position: absolute;
+    top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -20%);
+  transform: translate(-50%, -20%);
+}
