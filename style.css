@@ -167,6 +167,7 @@ body {
 .task {
   position: relative;
   width: 350px;
+  opacity: 0.87;
 }
 
 .liHeader {
