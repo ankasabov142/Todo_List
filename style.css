@@ -1,17 +1,34 @@
 body {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(142, 86, 208, 1) 52%,
-    rgba(50, 60, 62, 1) 98%
+  background-image: linear-gradient(
+    45deg,
+    hsl(240deg 35% 84%) 0%,
+    hsl(254deg 33% 81%) 9%,
+    hsl(268deg 31% 79%) 18%,
+    hsl(281deg 30% 76%) 27%,
+    hsl(290deg 28% 74%) 36%,
+    hsl(289deg 27% 73%) 45%,
+    hsl(287deg 26% 71%) 55%,
+    hsl(286deg 25% 70%) 64%,
+    hsl(280deg 25% 70%) 73%,
+    hsl(271deg 26% 69%) 82%,
+    hsl(263deg 27% 69%) 91%,
+    hsl(255deg 28% 68%) 100%
   );
 }
 
-.mainHeader{
-    font-size: 41px;
-    position: absolute;
-    top: 20%;
+.mainHeader {
+  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.3);
+  font-family: 'Lilita One', cursive;
+  
+  color: #cbecf7;
+  text-align: center;
+  font-size: 38px;
+  position: absolute;
+  top: 10%;
   left: 50%;
   -ms-transform: translate(-50%, -20%);
   transform: translate(-50%, -20%);
 }
+
+
+  /* font-family: 'Questrial', sans-serif; */
