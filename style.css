@@ -1,6 +1,6 @@
 body {
-  background-image: linear-gradient(
-    45deg,
+  background: linear-gradient(
+    70deg,
     hsl(240deg 35% 84%) 0%,
     hsl(254deg 33% 81%) 9%,
     hsl(268deg 31% 79%) 18%,
@@ -15,14 +15,19 @@ body {
     hsl(255deg 28% 68%) 100%
   );
 }
-
-.mainHeader {
+.upper {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  height: 30vmax;
+}
+.header {
   text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.3);
-  font-family: 'Lilita One', cursive;
-  
+  font-family: "Lilita One", cursive;
+  width: 20%;
   color: #cbecf7;
   text-align: center;
-  font-size: 38px;
+  font-size: 55px;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -30,5 +35,36 @@ body {
   transform: translate(-50%, -20%);
 }
 
+.border1 {
+  border-bottom: 3px #95a6a5 solid;
+  position: absolute;
+  right: 60%;
+  width: 40%;
+  height: 23%;
+}
+.border2 {
+  border-bottom: 3px #95a6a5 solid;
+  position: absolute;
+  left: 60%;
+  width: 40%;
+  height: 23%;
+}
 
-  /* font-family: 'Questrial', sans-serif; */
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 40px;
+    width: 33%;
+  }
+  .border1 {
+    width: 33%;
+    right: 70%;
+    height: 30% ;
+  }
+  .border2 {
+    width: 33%;
+    left: 70%;
+    height: 30% ;
+    ;
+  }
+}
+/* font-family: 'Questrial', sans-serif; */
