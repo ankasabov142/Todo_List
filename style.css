@@ -197,17 +197,33 @@ body {
   transition: filter 0.2s;
   user-select: none;
   -webkit-user-select: none;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   white-space: nowrap;
 }
 
-.taskUnit{
+.taskUnit {
+  border-top: 2px solid #95a6a5;
   display: flex;
-
+  position: relative;
+  height: fit-content;
+  overflow-y: scroll;
 }
-.taskList p{
-  text-align: center;
-font-size: 22px;
+.taskList p {
+  text-align: start;
+  position: absolute;
+  width: 240px;
+  height: fit-content;
+  font-size: 22px;
+  padding-left: 20px;
+  transform: translate(-10%,-30%);
+  font-family: "Questrial", sans-serif;
+}
+
+.taskInsideButton {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  transform: translate(400%,20%);
 }
 /* .checkList {
   font-family: "Questrial", sans-serif;
@@ -239,13 +255,13 @@ font-size: 22px;
 }
 
 .checkbox input:checked ~ .checkbox {
- transform: rotate(45deg);
- width: 14px;
- margin-left: 12px;
- border-color: #24c78e;
- border-top-color: transparent;
- border-left-color: transparent;
- border-radius: 0;
+  transform: rotate(45deg);
+  width: 14px;
+  margin-left: 12px;
+  border-color: #24c78e;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
 }
 
 .checkbox .checkbox {
