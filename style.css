@@ -49,7 +49,7 @@ body {
   position: relative;
   text-align: center;
   width: 100%;
-  height: 40%;
+  height: 20%;
   top: 0%;
 }
 
@@ -88,7 +88,7 @@ body {
   top: 0%;
 }
 
-.buttonAdd:after {
+.buttonAdd::after {
   background-clip: padding-box;
   background-color: #c2d0ce;
   border: solid transparent;
@@ -102,9 +102,27 @@ body {
   top: 0;
   z-index: -1;
 }
-
+.headerButtons::after {
+  background-clip: padding-box;
+  background-color: #c2d0ce;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
 .buttonAdd:main,
 .buttonAdd:focus {
+  user-select: auto;
+}
+
+.headerButtons:main,
+.headerButtons:focus {
   user-select: auto;
 }
 
@@ -113,12 +131,86 @@ body {
   -webkit-filter: brightness(1.1);
 }
 
+.headerButtons:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
 .buttonAdd:disabled {
   cursor: auto;
 }
-
+.headerButtons:disabled{
+  cursor: auto;
+}
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+}
+
+.taskList {
+  
+  transform: translateY(-10%);
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  display: flex;
+}
+.taskList div {
+  padding-left: 10px;
+  margin: 7px;
+  border-radius: 5%;
+  background-color: #c2d0ce;
+  /* float: left; */
+  padding-right: 10px;
+  list-style-type: none;
+  height: 70%;
+}
+
+.liHeader {
+  display: inline-flex;
+  font-family: "Lilita One", cursive;
+  text-decoration: solid;
+}
+.headerButtons {
+  position: relative;
+  appearance: button;
+  background-color: #c2d0ce;
+  border: solid 2px #95a6a5;
+  border-radius: 6px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-family: din-round, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 2px;
+  margin: 5px;
+  outline: none;
+  overflow: visible;
+  padding: 1px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.checkList {
+  font-family: "Questrial", sans-serif;
+  position: relative;
+}
+.checks {
+  list-style: none;
+
+  border-top: 3px solid black;
+  font-size: 22px;
 }
 
 @keyframes gradient {
@@ -137,7 +229,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .upper {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .header {
     font-size: 40px;
