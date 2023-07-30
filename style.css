@@ -139,7 +139,7 @@ body {
 .buttonAdd:disabled {
   cursor: auto;
 }
-.headerButtons:disabled{
+.headerButtons:disabled {
   cursor: auto;
 }
 .material-symbols-outlined {
@@ -147,7 +147,6 @@ body {
 }
 
 .taskList {
-  
   transform: translateY(-10%);
   position: relative;
   width: 100%;
@@ -202,7 +201,15 @@ body {
   white-space: nowrap;
 }
 
-.checkList {
+.taskUnit{
+  display: flex;
+
+}
+.taskList p{
+  text-align: center;
+font-size: 22px;
+}
+/* .checkList {
   font-family: "Questrial", sans-serif;
   position: relative;
 }
@@ -211,6 +218,43 @@ body {
 
   border-top: 3px solid black;
   font-size: 22px;
+} */
+
+.checkbox *,
+.checkbox *::before,
+.checkbox *::after {
+  box-sizing: border-box;
+}
+
+.checkbox label {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.checkbox input {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkbox {
+ transform: rotate(45deg);
+ width: 14px;
+ margin-left: 12px;
+ border-color: #24c78e;
+ border-top-color: transparent;
+ border-left-color: transparent;
+ border-radius: 0;
+}
+
+.checkbox .checkbox {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 3px solid #434343;
+  border-radius: 6px;
+  transition: all 0.375s;
 }
 
 @keyframes gradient {
