@@ -164,14 +164,33 @@ body {
   list-style-type: none;
   height: 70%;
 }
+.task {
+  position: relative;
+  width: 350px;
+}
 
 .liHeader {
-  display: inline-flex;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   font-family: "Lilita One", cursive;
   text-decoration: solid;
 }
+.liHeader h1 {
+  max-width: 200px;
+  max-height: 60px;
+  overflow: scroll;
+}
+.butDiv {
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  display: flex;
+}
 .headerButtons {
-  position: relative;
   appearance: button;
   background-color: #c2d0ce;
   border: solid 2px #95a6a5;
@@ -189,7 +208,7 @@ body {
   margin: 5px;
   outline: none;
   overflow: visible;
-  padding: 1px 16px;
+  padding: 1px 6px;
   text-align: center;
   text-transform: uppercase;
   touch-action: manipulation;
@@ -215,7 +234,18 @@ body {
   height: fit-content;
   font-size: 22px;
   padding-left: 20px;
-  transform: translate(-10%,-30%);
+  transform: translate(-10%, -30%);
+  font-family: "Questrial", sans-serif;
+}
+.taskUnit p {
+  float: left;
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  font-size: 22px;
+  
+  transform: translate(-5%, -30%);
+  overflow: scroll;
   font-family: "Questrial", sans-serif;
 }
 
@@ -223,7 +253,7 @@ body {
   position: relative;
   width: fit-content;
   height: fit-content;
-  transform: translate(400%,20%);
+  transform: translate(600%, 20%);
 }
 /* .checkList {
   font-family: "Questrial", sans-serif;
@@ -273,6 +303,10 @@ body {
   transition: all 0.375s;
 }
 
+.liHeader {
+  overflow-y: scroll;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -307,9 +341,53 @@ body {
   }
 
   .buttonAdd {
-    top: 80%;
+    top: 40%;
     text-align: center;
     width: 20%;
+  }
+
+  .taskList {
+    /* transform: translateY(-10%); */
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    display: block;
+  }
+
+  .taskUnit p {
+    float: left;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    font-size: 22px;
+    
+    transform: translate(-5%, -30%);
+    overflow: scroll;
+    font-family: "Questrial", sans-serif;
+  }
+  
+  .taskInsideButton {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    transform: translate(600%, 20%);
+  }
+  
+  /* .liHeader h1 {
+    float: left;
+    padding-right: 20px;
+    max-width: 90px;
+    max-height: 80px;
+    overflow: scroll;
+  } */
+  .h1Div{
+    float: left;
+    padding-right: 20px;
+    max-width: 90px;
+    max-height: 80px;
+    overflow: scroll;
   }
 }
 /* font-family: 'Questrial', sans-serif; */
