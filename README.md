@@ -72,16 +72,5 @@ Task 3 of my internship at MEGAPARTS. Todo List created using html, css, javascr
             </button>
           </div>
         </div>
-        <div class="taskUnit">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" />
-              <span class="checkbox"></span>
-            </label>
-          </div>
-          <b><p>Hello!</p></b>
-          <button class="taskInsideButton headerButtons">
-            <span class="material-symbols-outlined"> delete </span>
-          </button>
-        </div>
+        
       </div> -->
