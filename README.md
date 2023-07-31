@@ -1,1 +1,1 @@
-Task 3 of my internship at MEGAPARTS. Todo List created using html, css, javascrpit and Jquery. BaaS is used. An exercise for learning a new js library, namely Jquery. 
+Task 3 of my internship at MEGAPARTS. Todo List created using html, css, javascrpit and Jquery. An exercise for learning a new js library, namely Jquery. 
