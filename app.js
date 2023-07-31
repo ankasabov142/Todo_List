@@ -2,8 +2,7 @@ $(document).ready(function () {
   const mainButton = document.querySelector(".buttonAdd");
   const taskList = document.querySelector(".taskList");
   $(mainButton).on("click", function (e) {
-    console.log(
-      $(taskList).append(`<div class="task ">
+    $(taskList).append(`<div class="task ">
     <div class="liHeader">
       <h1>Task List</h1>
       <div class="butDiv">
@@ -19,10 +18,28 @@ $(document).ready(function () {
       </div>
     </div>
     
-  </div>`)
-    );
-    $(taskList.lastChild).addClass(`${e.timeStamp}`);
-  
+  </div>`);
+    let currTime = e.timeStamp;
+    let currentTask = taskList.lastChild;
+    $(currentTask).addClass(`${currTime}`);
+    console.log(`.${currentTask.childNodes.firstChild}`)
 
-});
+    // $(".addUnit."+currTime).on("click", function (e) {
+
+    //       $('task.'+currTime).append(`<div class="taskUnit">
+    // <div class="checkbox">
+    //   <label>
+    //     <input type="checkbox" />
+    //     <span class="checkbox"></span>
+    //   </label>
+    // </div>
+    // <b><p>Hello!</p></b>
+    // <button class="taskInsideButton headerButtons">
+    //   <span class="material-symbols-outlined"> delete </span>
+    // </button>
+    // </div>`);
+  });
+
+  currTime = "";
+  currentTask = "";
 });
