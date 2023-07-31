@@ -24,17 +24,37 @@ $(document).ready(function () {
     $(currentTask).attr("id", `${currTime}`);
     $(`#${currTime} .addUnit`).on("click", function (e) {
       $(`#${currTime}`).append(`<div class="taskUnit">
-    <div class="checkbox">
+      <div class="left">
+      <div class="checkbox">
       <label>
-        <input type="checkbox" />
-        <span class="checkbox"></span>
+      <input class="taskUnitCheckbox" type="checkbox" />
+      <span class="checkbox"></span>
       </label>
-    </div>
-    <b class="taskTextWrapper"><p class='taskText'>Hello!</p></b>
-    <button class="taskInsideButton headerButtons">
+      </div>
+      <b class="taskTextWrapper"><p class='taskText'>Hello!</p></b>
+      </div>
+      <button class="taskInsideButton headerButtons">
       <span class="material-symbols-outlined"> delete </span>
     </button>
     </div>`);
+      $(`input.taskUnitCheckbox`).on("click", function (e) {
+        const textEl = $(e.currentTarget)
+          .parent()
+          .parent()
+          .siblings(".taskTextWrapper")[0];
+        if (e.currentTarget.checked) {
+          $(textEl).css({"text-decoration": "line-through","text-decoration-thickness": "2px","text-decoration-color":"grey"});
+        }else{
+            $(textEl).css("text-decoration","none");
+        }
+
+        console.log("obicham deniz");
+      });
+      $(`.taskInsideButton`).on("click", function (e) {
+        let parent = $(e.currentTarget).parent();
+
+        parent.remove();
+      });
     });
     $(`#${currTime} .deleteUnit`).on("click", function (e) {
       $(`#${currTime}`).remove();
@@ -49,8 +69,7 @@ done_all
 </span>
 </button>`);
 
-    editBtn.on("click", function editFunc (e) {
-      console.log("Denka obicham te");
+    editBtn.on("click", function editFunc(e) {
       let taskValues = [];
       for (const task of $(`#${currTime} .taskUnit`)) {
         const textElement = task.querySelector(".taskText");
@@ -59,7 +78,7 @@ done_all
         const text = textElement.textContent;
         taskValues.push({ text, wrapper: wrapperElement });
         textElement.remove();
-        $(wrapperElement).append(
+        $(task.querySelector(".taskUnit .left")).append(
           `<input type="text" class='taskEditInput' value="${text}">`
         );
       }
@@ -100,6 +119,8 @@ done_all
         doneEditBtn.remove();
 
         $(butDiv).prepend(editBtn);
+
+        editBtn.on("click", editFunc);
       });
     });
   });

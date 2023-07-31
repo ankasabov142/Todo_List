@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: linear-gradient(
     -45deg,
@@ -24,7 +32,7 @@ body {
   text-align: center;
   font-size: 55px;
   position: absolute;
-  top: 10%;
+  top: 25%;
   left: 50%;
   -ms-transform: translate(-50%, -20%);
   transform: translate(-50%, -20%);
@@ -147,23 +155,21 @@ body {
 }
 
 .taskList {
-  transform: translateY(-10%);
   position: relative;
   width: 100%;
-  height: fit-content;
+  max-width: 100%;
   justify-content: center;
   display: flex;
+  align-items: start;
+  flex-wrap: wrap;
 }
-.taskList div {
-  padding-left: 10px;
-  margin: 7px;
-  border-radius: 5%;
-  background-color: #c2d0ce;
-  padding-right: 10px;
-  list-style-type: none;
-  height: 70%;
-}
+
 .task {
+  padding: 10px;
+  margin: 7px;
+  border-radius: 10px;
+  background-color: #c2d0ce;
+  list-style-type: none;
   position: relative;
   width: 350px;
   opacity: 0.87;
@@ -171,23 +177,36 @@ body {
 
 .liHeader {
   position: relative;
-  display: flex;
   justify-content: space-between;
   font-family: "Lilita One", cursive;
   text-decoration: solid;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  overflow-y: scroll;
 }
+
+.liHeader input {
+  font-family: "Lilita One", cursive;
+  font-size: 2em;
+  width: min-content;
+  font-weight: bolder;
+  background-color: transparent;
+  max-width: 192px;
+}
+
 .liHeader h1 {
-  max-width: 200px;
+  max-width: 192px;
   max-height: 60px;
   overflow: scroll;
 }
 .butDiv {
-  right: 0%;
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  width: 120px;
-  height: 80px;
+  /* right: 0%; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  /* position: absolute; */
+  /* width: 120px; */
+  /* height: 80px */
   display: flex;
 }
 .headerButtons {
@@ -222,28 +241,43 @@ body {
 .taskUnit {
   border-top: 2px solid #95a6a5;
   display: flex;
+  align-items: center;
+  gap: 10px;
   position: relative;
+  justify-content: space-between;
   height: fit-content;
   overflow-y: scroll;
+  padding-block: 10px;
 }
-.taskList p {
-  text-align: start;
-  position: absolute;
-  width: 240px;
-  height: fit-content;
-  font-size: 22px;
-  padding-left: 20px;
-  transform: translate(-10%, -30%);
+
+.taskUnit .left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+}
+.checkbox :checked{
+  .taskText{
+    color:darkblue;
+  }
+}
+.taskEditInput{
+  font-size: 18px;
+  max-width: 70%;
   font-family: "Questrial", sans-serif;
 }
-.taskUnit p {
-  float: left;
-  position: absolute;
-  width: 200px;
-  height: 30px;
-  font-size: 22px;
+input[type='text']{ background-color: rgba(255, 255, 255, 0.427);
+  border: none;
+  border-radius: 7px;
+  padding-inline:5px ;
+}
 
-  transform: translate(-5%, -30%);
+
+
+
+.taskUnit p {
+  font-size: 22px;
   overflow: scroll;
   font-family: "Questrial", sans-serif;
 }
@@ -252,7 +286,6 @@ body {
   position: relative;
   width: fit-content;
   height: fit-content;
-  transform: translate(600%, 20%);
 }
 
 .checkbox *,
@@ -290,10 +323,6 @@ body {
   border: 3px solid #434343;
   border-radius: 6px;
   transition: all 0.375s;
-}
-
-.liHeader {
-  overflow-y: scroll;
 }
 
 @keyframes gradient {
