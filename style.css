@@ -159,7 +159,6 @@ body {
   margin: 7px;
   border-radius: 5%;
   background-color: #c2d0ce;
-  /* float: left; */
   padding-right: 10px;
   list-style-type: none;
   height: 70%;
@@ -217,7 +216,6 @@ body {
   transition: filter 0.2s;
   user-select: none;
   -webkit-user-select: none;
-  /* vertical-align: middle; */
   white-space: nowrap;
 }
 
@@ -244,7 +242,7 @@ body {
   width: 200px;
   height: 30px;
   font-size: 22px;
-  
+
   transform: translate(-5%, -30%);
   overflow: scroll;
   font-family: "Questrial", sans-serif;
@@ -256,16 +254,6 @@ body {
   height: fit-content;
   transform: translate(600%, 20%);
 }
-/* .checkList {
-  font-family: "Questrial", sans-serif;
-  position: relative;
-}
-.checks {
-  list-style: none;
-
-  border-top: 3px solid black;
-  font-size: 22px;
-} */
 
 .checkbox *,
 .checkbox *::before,
@@ -348,7 +336,6 @@ body {
   }
 
   .taskList {
-    /* transform: translateY(-10%); */
     margin-top: 30px;
     position: relative;
     width: 100%;
@@ -363,27 +350,20 @@ body {
     width: 200px;
     height: 30px;
     font-size: 22px;
-    
+
     transform: translate(-5%, -30%);
     overflow: scroll;
     font-family: "Questrial", sans-serif;
   }
-  
+
   .taskInsideButton {
     position: relative;
     width: fit-content;
     height: fit-content;
     transform: translate(600%, 20%);
   }
-  
-  /* .liHeader h1 {
-    float: left;
-    padding-right: 20px;
-    max-width: 90px;
-    max-height: 80px;
-    overflow: scroll;
-  } */
-  .h1Div{
+
+  .h1Div {
     float: left;
     padding-right: 20px;
     max-width: 90px;
@@ -391,4 +371,3 @@ body {
     overflow: scroll;
   }
 }
-/* font-family: 'Questrial', sans-serif; */
