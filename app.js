@@ -31,7 +31,7 @@ $(document).ready(function () {
       <span class="checkbox"></span>
       </label>
       </div>
-      <b class="taskTextWrapper"><p class='taskText'>Hello!</p></b>
+      <b class="taskTextWrapper"><p class='taskText'>Task</p></b>
       </div>
       <button class="taskInsideButton headerButtons">
       <span class="material-symbols-outlined"> delete </span>
@@ -43,12 +43,15 @@ $(document).ready(function () {
           .parent()
           .siblings(".taskTextWrapper")[0];
         if (e.currentTarget.checked) {
-          $(textEl).css({"text-decoration": "line-through","text-decoration-thickness": "2px","text-decoration-color":"grey"});
-        }else{
-            $(textEl).css("text-decoration","none");
+          $(textEl).css({
+            "text-decoration": "line-through",
+            "text-decoration-thickness": "2px",
+            "text-decoration-color": "grey",
+          });
+        } else {
+          $(textEl).css("text-decoration", "none");
         }
 
-        console.log("obicham deniz");
       });
       $(`.taskInsideButton`).on("click", function (e) {
         let parent = $(e.currentTarget).parent();

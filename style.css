@@ -201,12 +201,6 @@ body {
   overflow: scroll;
 }
 .butDiv {
-  /* right: 0%; */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
-  /* position: absolute; */
-  /* width: 120px; */
-  /* height: 80px */
   display: flex;
 }
 .headerButtons {
@@ -250,31 +244,29 @@ body {
   padding-block: 10px;
 }
 
-.taskUnit .left{
+.taskUnit .left {
   display: flex;
   align-items: center;
   gap: 10px;
   position: relative;
   flex: 1;
 }
-.checkbox :checked{
-  .taskText{
-    color:darkblue;
+.checkbox :checked {
+  .taskText {
+    color: darkblue;
   }
 }
-.taskEditInput{
+.taskEditInput {
   font-size: 18px;
   max-width: 70%;
   font-family: "Questrial", sans-serif;
 }
-input[type='text']{ background-color: rgba(255, 255, 255, 0.427);
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.427);
   border: none;
   border-radius: 7px;
-  padding-inline:5px ;
+  padding-inline: 5px;
 }
-
-
-
 
 .taskUnit p {
   font-size: 22px;
@@ -364,24 +356,8 @@ input[type='text']{ background-color: rgba(255, 255, 255, 0.427);
     width: 20%;
   }
 
-  .taskList {
-    margin-top: 30px;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    display: block;
-  }
-
   .taskUnit p {
-    float: left;
-    position: absolute;
-    width: 200px;
-    height: 30px;
     font-size: 22px;
-
-    transform: translate(-5%, -30%);
-    overflow: scroll;
     font-family: "Questrial", sans-serif;
   }
 
@@ -389,7 +365,6 @@ input[type='text']{ background-color: rgba(255, 255, 255, 0.427);
     position: relative;
     width: fit-content;
     height: fit-content;
-    transform: translate(600%, 20%);
   }
 
   .h1Div {
