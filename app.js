@@ -4,7 +4,7 @@ $(document).ready(function () {
   const taskList = document.querySelector(".taskList");
   //addTask button functionality.
   $(mainButton).on("click", function (e) {
-    $(taskList).append(`<div class="task ">
+    $(taskList).append(`<div class="task sortable">
     <div class="liHeader">
       <h1 class="headingText">Task List</h1>
       <div class="butDiv">
